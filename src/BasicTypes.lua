@@ -61,7 +61,7 @@ function basicTypes.unsignedIntArray(buffer: Types.Buffer, count: number): {numb
 	local o = table.create(count)
 	local strings = basicTypes.InterleaveArrayWithSize(buffer, count, 4)
 	for i = 1, count do
-		o[i] = strings:readNumber("<I4")
+		o[i] = strings:readNumber(">I4")
 	end
 
 	return o
