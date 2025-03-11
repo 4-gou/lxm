@@ -262,7 +262,7 @@ local function PROP(chunk: Types.Chunk, rbxm: Types.Rbxm)
 			local kpCount = reader:readNumber("<I4")
 			local kp = table.create(kpCount)
 
-			for i = 1, kp do
+			for i = 1, #kp do
 				table.insert(kp, NumberSequenceKeypoint.new(
 					reader:readNumber("<f"),
 					reader:readNumber("<f"),
